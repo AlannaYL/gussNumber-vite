@@ -41,7 +41,7 @@ inputNum.addEventListener("keydown", (event) => {
       addNew.innerText = ""
     } else {
       addNew.innerText = getNum;
-      addNew.classList.add("text-base", "text-gray-200");
+      addNew.classList.add("text-base", "text-gray-400");
       guessedList.appendChild(addNew);
       range.minNum = 0;
       range.maxNum = 100;

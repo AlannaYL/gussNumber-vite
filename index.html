@@ -12,28 +12,29 @@
 
 
   <div class="flex items-center justify-center h-screen">
-    <div class="container mx-auto overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32 ">
+    <div class="container mx-auto overflow-hidden bg-white py-16 sm:py-24 lg:py-32 rounded-lg">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
           <div class="max-w-xl lg:max-w-lg">
-            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">終極密碼遊戲</h2>
-            <p class="mt-4 text-lg leading-8 text-gray-200">輸入1-100隨機的數字，每次都會提供猜測範圍，直到猜對數字</p>
+            <h2 class="text-3xl font-bold tracking-tight text-transparent sm:text-4xl">終極密碼遊戲</h2>
+            <p class="mt-4 text-lg leading-8 text-gray-400">
+              輸入1-100隨機的數字，每次都會提供猜測範圍，直到猜對數字</p>
             <div class="mt-6 flex max-w-md gap-x-4">
               <label for="subNumber" class="sr-only">輸入數字</label>
               <input id="subNumber"
-                class="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                class="min-w-0 flex-auto rounded-md border-0  px-3.5 py-2 text-black shadow-sm  sm:text-sm sm:leading-6"
                 placeholder="Enter Number">
               <button id="submitBtn" type="submit"
-                class="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400">送出數字</button>
+                class="flex-none rounded-md bg-red-200 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-200">送出數字</button>
             </div>
           </div>
           <div class="max-w-xl lg:max-w-lg flex flex-row">
             <div id="rangeNum" class="flex flex-col basis-1/2 items-start">
-              <p class="mt-4 text-lg leading-8 text-gray-200">數字範圍提示</p>
-              <p class=" text-gray-200"></p>
+              <p class="mt-4 text-lg leading-8 text-gray-400">數字範圍提示</p>
+              <p class=" text-gray-400"></p>
             </div>
             <div id="guessedList" class="flex flex-col basis-1/2 items-start">
-              <p class="mt-4 text-lg leading-8 text-gray-200">猜過的數字</p>
+              <p class="mt-4 text-lg leading-8 text-gray-400">猜過的數字</p>
             </div>
           </div>
         </div>
