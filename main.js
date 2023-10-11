@@ -21,7 +21,7 @@ submitButton.addEventListener("click", () => {
   inputNum.value = ''
   const addNew = document.createElement("p")
   addNew.innerText = getNum
-  addNew.classList.add("text-base", "text-gray-200")
+  addNew.classList.add("text-base", "text-gray-400")
   guessedList.appendChild(addNew)
   gameStar(getNum)
 })
@@ -43,9 +43,6 @@ inputNum.addEventListener("keydown", (event) => {
       addNew.innerText = getNum;
       addNew.classList.add("text-base", "text-gray-400");
       guessedList.appendChild(addNew);
-      range.minNum = 0;
-      range.maxNum = 100;
-      updateRangeText();
     }
 
     gameStar(getNum);
@@ -69,7 +66,7 @@ function gameStar(num) {
     rangeText.textContent = "恭喜猜對數字 " + num;
 
     const addNew = document.createElement("button")
-    addNew.classList.add("flex-none", "rounded-md", "bg-indigo-500", "px-3.5", "mt-2", "py-2.5", "text-sm", "font-semibold", "text-white", "shadow-sm", "hover:bg-indigo-400")
+    addNew.classList.add("flex-none", "rounded-md", "bg-red-200", "px-3.5", "mt-2", "py-2.5", "text-sm", "font-semibold", "text-white", "shadow-sm", "hover:bg-emerald-200")
     addNew.innerText = "再來一次？"
     rangeNum.appendChild(addNew)
 
