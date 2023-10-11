@@ -50,6 +50,7 @@ function gameStar(num) {
     range.minNum = num
   } else if (num == answer) {
     rangeText.textContent = "恭喜猜對數字 " + num;
+
     const addNew = document.createElement("button")
     addNew.classList.add("flex-none", "rounded-md", "bg-indigo-500", "px-3.5", "mt-2", "py-2.5", "text-sm", "font-semibold", "text-white", "shadow-sm", "hover:bg-indigo-400")
     addNew.innerText = "再來一次？"
