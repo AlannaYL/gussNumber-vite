@@ -29,12 +29,25 @@ submitButton.addEventListener("click", () => {
 inputNum.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     event.preventDefault(); // 防止表單提交或其他預設行為
-    let getNum = inputNum.value;
+    let input = inputNum.value;
     inputNum.value = '';
+    const getNum = parseInt(input);
     const addNew = document.createElement("p");
-    addNew.innerText = getNum;
-    addNew.classList.add("text-base", "text-gray-200");
-    guessedList.appendChild(addNew);
+    if (isNaN(getNum)) {
+      addNew.innerText = ""
+      alert("請輸入數字！")
+    } else if (getNum < range.minNum || getNum > range.maxNum) {
+      alert("請輸入提示內的數字範圍！")
+      addNew.innerText = ""
+    } else {
+      addNew.innerText = getNum;
+      addNew.classList.add("text-base", "text-gray-200");
+      guessedList.appendChild(addNew);
+      range.minNum = 0;
+      range.maxNum = 100;
+      updateRangeText();
+    }
+
     gameStar(getNum);
   }
 });
@@ -44,6 +57,10 @@ function updateRangeText() {
 }
 
 function gameStar(num) {
+  if (num < range.minNum || num > range.maxNum) {
+    return;
+  }
+
   if (num > answer) {
     range.maxNum = num
   } else if (num < answer) {
