@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>終極密碼</title>
+  <!-- <link rel="stylesheet" href="./style.css"> -->
+  <script type="module" crossorigin src="/gussNumber-vite/assets/index.a295f678.js"></script>
+  <link rel="stylesheet" href="/gussNumber-vite/assets/index.b8663a35.css">
+</head>
+
+<body>
+
+
+  <div class="flex items-center justify-center h-screen">
+    <div class="container mx-auto overflow-hidden bg-white py-16 sm:py-24 lg:py-32 rounded-lg">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+          <div class="max-w-xl lg:max-w-lg">
+            <h2 class="text-3xl font-bold tracking-tight text-transparent sm:text-4xl">終極密碼遊戲</h2>
+            <p class="mt-4 text-lg leading-8 text-gray-400">
+              輸入1-100隨機的數字，每次都會提供猜測範圍，直到猜對數字</p>
+            <div class="mt-6 flex max-w-md gap-x-4">
+              <label for="subNumber" class="sr-only">輸入數字</label>
+              <input id="subNumber"
+                class="min-w-0 flex-auto rounded-md border-0  px-3.5 py-2 text-black shadow-sm  sm:text-sm sm:leading-6"
+                placeholder="Enter Number">
+              <button id="submitBtn" type="submit"
+                class="flex-none rounded-md bg-red-200 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-200">送出數字</button>
+            </div>
+          </div>
+          <div class="max-w-xl lg:max-w-lg flex flex-row">
+            <div id="rangeNum" class="flex flex-col basis-1/2 items-start">
+              <p class="mt-4 text-lg leading-8 text-gray-400">數字範圍提示</p>
+              <p class=" text-gray-400"></p>
+            </div>
+            <div id="guessedList" class="flex flex-col basis-1/2 items-start">
+              <p class="mt-4 text-lg leading-8 text-gray-400">猜過的數字</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+</body>
+
+</html>
